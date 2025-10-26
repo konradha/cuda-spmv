@@ -8,7 +8,7 @@ INCLUDES := -Iinclude
 OUTDIR := build
 BINDIR := bin
 
-# Auto-discover kernels and compile them all into one binary
+# discover all kernels
 KERNEL_SRCS  := $(wildcard kernels/*.cu)
 KERNEL_NAMES := $(basename $(notdir $(KERNEL_SRCS)))
 KERNEL_OBJS  := $(addprefix $(OUTDIR)/kernel_, $(addsuffix .o,$(KERNEL_NAMES)))
