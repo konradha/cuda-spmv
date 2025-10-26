@@ -108,6 +108,9 @@ extern "C" void cpasync_double(int rows, const int *indptr, const int *indices,
 extern "C" void pqueue(int rows, const int *indptr, const int *indices,
                        const float *values, const float *x, float *y);
 
+extern "C" void lightspmv(int rows, const int *indptr, const int *indices,
+                          const float *values, const float *x, float *y);
+
 using SpmvLauncher = void (*)(int, const int *, const int *, const float *,
                               const float *, float *);
 
@@ -123,6 +126,7 @@ static const KernelSpec kKernels[] = {
     {"warp_vectorized", &warp_vectorized},
     {"merge", &merge},
     {"cpasync_double", &cpasync_double},
+    {"lightspmv", &lightspmv},
     // {"persistent_queue", &pqueue}
 };
 
