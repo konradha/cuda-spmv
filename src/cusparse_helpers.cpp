@@ -121,12 +121,12 @@ struct KernelSpec {
 
 static const KernelSpec kKernels[] = {
     {"baseline", &kernel_spmv_fp32},
-    {"warp_per_row", &warp_per_row},
-    {"multiwarp_per_row", &spmv_multiwarp},
-    {"warp_vectorized", &warp_vectorized},
-    {"merge", &merge},
-    {"cpasync_double", &cpasync_double},
-    {"lightspmv", &lightspmv},
+    // {"warp_per_row", &warp_per_row},
+    // {"multiwarp_per_row", &spmv_multiwarp},
+    // {"warp_vectorized", &warp_vectorized},
+    // {"merge", &merge},
+    // {"cpasync_double", &cpasync_double},
+    {"lightspmv", &lightspmv}
     // {"persistent_queue", &pqueue}
 };
 
