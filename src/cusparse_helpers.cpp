@@ -133,6 +133,7 @@ static const KernelSpec kKernels[] = {
 static void run_cusparse_collect(const DeviceCSR &D, int warmup, int repeat,
                                  CuSparseAlg alg, std::vector<float> &samples) {
   cusparseHandle_t h = nullptr;
+  cudaFree(0);
   cusparseCreate(&h);
 
   cusparseSpMatDescr_t mat = nullptr;

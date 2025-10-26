@@ -5,4 +5,4 @@ for sparse formats.
 
 We focus only on CSR here at first, using SuiteSparse.
 
-![Preliminary result](./out/allkernels_20251026_135059/gflops_all.png)
+![Preliminary result](./out/allkernels_20251026_140055/gflops_all.png)
